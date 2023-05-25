@@ -1,0 +1,9 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+.navbar {
+    background-color: #003366;
+}
+
+.navbar-item {
+    color: white;
+}
