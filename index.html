@@ -9,16 +9,91 @@
     <title>Weather Dashboard</title>
 </head>
 
-<nav class="navbar" role="navigation" aria-label="main-navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item">
-            <div>Weather Dashboard</div>
-        </a>
-    </div>
-</nav>
-
 <body>
-    
+    <nav class="navbar" role="navigation" aria-label="main-navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item subtitle">
+                <div>Weather Dashboard</div>
+            </a>
+        </div>
+    </nav>
+
+<main>
+    <div class="columns" id="main" style="display: none;">
+    <div class="column">
+        <section class="section">
+            <div class="tile is-ancestor">
+            <div class="tile is-parent">
+            <article class="tile is-child box" style="text-align:center">
+                <div class="columns is-centered">
+                <div class="column">
+                    <p class="title" id="currentCity"></p>
+                    <p class="subtitle" id="currentDate"></p>
+                </div>
+                <div class="column" style="font-weight:600;">
+                    <div id="currentTemperature"></div>
+                    <div id="currentHumidity"></div>
+                    <div id="currentWindSpeed"></div>
+                    <div id="currentUVIndex"></div>
+                </div>
+                </div>
+            </article>
+    </div>
+    </div>
+
+    <div class="tile is-ancestor">
+    <div class="tile is-parent">
+            <article class="tile is-child" style="text-align:center">
+                <p class="subtitle">5 Day Forecast</p>
+            </article>
+        </div>
+        </div>
+            <div class="tile is-ancestor">
+              <div class="tile is-parent">
+                <article class="tile is-child box" id="day1" style="text-align:center"></article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box" id="day2" style="text-align:center"></article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box" id="day3" style="text-align:center"></article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box" id="day4" style="text-align:center"></article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box" id="day5" style="text-align:center"></article>
+              </div>
+            </div>
+        </section>
+        </div>
+
+    <div class="column is-one-quarter">
+        <section class="section">
+        <nav class="panel">
+            <p class="panel-heading" style="font-size:large; text-align:center">Search for a city</p>
+            <div class="panel-block">
+                <p class="control has-icons-left">
+                <input id="citySearch" class="input" type="text" placeholder="Search">
+                <span class="icon is-left">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+                </p>
+            </div>
+            <div id="cityHistoryContainer"></div>
+                <div class="panel-block">
+                <button id="clear" class="button is-link is-outlined is-danger is-fullwidth">Clear History</button>
+            </div>
+        </nav>
+        </section>
+    </div>
+    </div>
+</main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
